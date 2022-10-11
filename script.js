@@ -323,3 +323,17 @@ console.log("10)")
 //Se trabajará con una muestra representativa
 Encuesta(Votos = ["C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2"]);
 console.log("\n");
+
+
+//11
+function Primos(Numeros = []) {
+  let Sumatoria = 0, Productoria = 1;
+  Numeros.forEach(Numero => {
+    Sumatoria = Sumatoria + Numero;
+    Productoria = Numero * Productoria;
+  });
+  console.log("Sumatoria:",Sumatoria+"\nProductoria:",Productoria+"\nPromedio:",(Sumatoria/Numeros.length));
+}
+console.log("11)");
+Primos(Numeros = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]);
+console.log("\n");
