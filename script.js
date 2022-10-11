@@ -114,7 +114,6 @@ console.log('3)');
 SueldoxEmpleado(52);
 console.log('\n');
 
-
 //4
 function PromedioEdades(Hombres = [], Mujeres = []) {
   let SumatoriaH = 0,
@@ -131,12 +130,19 @@ function PromedioEdades(Hombres = [], Mujeres = []) {
   });
   PromedioM = SumatoriaM / Mujeres.length;
   PromedioE = (SumatoriaH + SumatoriaM) / (Hombres.length + Mujeres.length);
-  console.log("Promedio de edades de hombres:", PromedioH + "\n" + "Promedio de edades de Mujeres:", PromedioM + "\n" + "Promedio de edades del grupo:", PromedioE);
+  console.log(
+    'Promedio de edades de hombres:',
+    PromedioH + '\n' + 'Promedio de edades de Mujeres:',
+    PromedioM + '\n' + 'Promedio de edades del grupo:',
+    PromedioE
+  );
 }
-console.log("4)");
-PromedioEdades(Hombres = [17, 16, 15, 22, 19, 18, 20, 22, 21, 15, 16, 17, 17, 17], Mujeres = [16, 16, 18, 18, 15, 16, 19, 19, 17, 20, 24, 21, 14]);
+console.log('4)');
+PromedioEdades(
+  (Hombres = [17, 16, 15, 22, 19, 18, 20, 22, 21, 15, 16, 17, 17, 17]),
+  (Mujeres = [16, 16, 18, 18, 15, 16, 19, 19, 17, 20, 24, 21, 14])
+);
 console.log('\n');
-
 
 //5
 function NumeroMenor(Numeros = []) {
@@ -146,12 +152,11 @@ function NumeroMenor(Numeros = []) {
       Menor = Numero;
     }
   });
-  console.log("El número menor es:", Menor);
+  console.log('El número menor es:', Menor);
 }
-console.log("5)");
-NumeroMenor(Numeros = [5, 8, 9, 4, 5, 1, 4, 9, 2, 55, 3]);
+console.log('5)');
+NumeroMenor((Numeros = [5, 8, 9, 4, 5, 1, 4, 9, 2, 55, 3]));
 console.log('\n');
-
 
 //6
 function Bascula(DiezBasculas = [], PesoAnterior) {
@@ -161,14 +166,37 @@ function Bascula(DiezBasculas = [], PesoAnterior) {
   });
   PromedioPeso = SumatoriaPeso / DiezBasculas.length;
   if (PromedioPeso > PesoAnterior) {
-    console.log("SUBIÓ(" + (PromedioPeso - PesoAnterior) + "kg)");
+    console.log('SUBIÓ(' + (PromedioPeso - PesoAnterior) + 'kg)');
   } else if (PromedioPeso < PesoAnterior) {
-    console.log("BAJÓ(" + (PesoAnterior - PromedioPeso) + "kg)");
+    console.log('BAJÓ(' + (PesoAnterior - PromedioPeso) + 'kg)');
   } else {
-    console.log("SIN CAMBIO");
+    console.log('SIN CAMBIO');
   }
-
 }
-console.log("6)");
-Bascula(Pesaje = [100, 100.2, 99, 100, 100.4, 99.6, 99.8, 100, 100, 100.4], 140);
+console.log('6)');
+Bascula(
+  (Pesaje = [100, 100.2, 99, 100, 100.4, 99.6, 99.8, 100, 100, 100.4]),
+  140
+);
 console.log('\n');
+
+
+//7
+function TotalCompra(ListaCompra) {
+  let Total = 0;
+  ListaCompra.forEach((Precio, Producto) => {
+    Total += Precio;
+
+  });
+  console.log("El total de la compra es:", Total + "$");
+}
+console.log("7)");
+let ListaCompra = new Map();
+ListaCompra.set("TotalPoducto1", 18000);
+ListaCompra.set("TotalPoducto2", 8000);
+ListaCompra.set("TotalPoducto3", 25000);
+ListaCompra.set("totalPoducto4", 2500);
+ListaCompra.set("TotalPoducto5", 5000);
+TotalCompra(ListaCompra);
+console.log('\n');
+
