@@ -146,8 +146,29 @@ function NumeroMenor(Numeros = []) {
       Menor = Numero;
     }
   });
-  console.log("El número menor es:",Menor);
+  console.log("El número menor es:", Menor);
 }
 console.log("5)");
-NumeroMenor(Numeros = [5,8,9,4,5,1,4,9,2,55,3]);
+NumeroMenor(Numeros = [5, 8, 9, 4, 5, 1, 4, 9, 2, 55, 3]);
+console.log('\n');
+
+
+//6
+function Bascula(DiezBasculas = [], PesoAnterior) {
+  let SumatoriaPeso = 0, PromedioPeso = 0;
+  DiezBasculas.forEach(Peso => {
+    SumatoriaPeso += Peso;
+  });
+  PromedioPeso = SumatoriaPeso / DiezBasculas.length;
+  if (PromedioPeso > PesoAnterior) {
+    console.log("SUBIÓ(" + (PromedioPeso - PesoAnterior) + "kg)");
+  } else if (PromedioPeso < PesoAnterior) {
+    console.log("BAJÓ(" + (PesoAnterior - PromedioPeso) + "kg)");
+  } else {
+    console.log("SIN CAMBIO");
+  }
+
+}
+console.log("6)");
+Bascula(Pesaje = [100, 100.2, 99, 100, 100.4, 99.6, 99.8, 100, 100, 100.4], 140);
 console.log('\n');
