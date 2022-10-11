@@ -114,7 +114,7 @@ function SueldoxEmpleado(Horas) {
   } else if (Horas >= 40) {
     Sueldo = (Horas - 40) * 25 + 800;
   }
-  console.log("El sueldo es de:", Sueldo + "$");
+  console.log("El sueldo es de: $"+Sueldo);
 }
 console.log("3)");
 SueldoxEmpleado(52);
@@ -193,7 +193,7 @@ function TotalCompra(ListaCompra) {
   ListaCompra.forEach((Precio, Producto) => {
     Total += Precio;
   });
-  console.log("El total de la compra es:", Total + "$");
+  console.log("El total de la compra es: $" + Total);
 }
 console.log("7)");
 let ListaCompra = new Map();
@@ -235,14 +235,49 @@ function Teatro(Clientes = [], Precio) {
     }
   });
   console.log(
-    "- Lista de cantidad de dinero no percibido por categoría -\n" + "5 - 14:",
-    Categoria1 + "$\n" + "15 - 19:",
-    Categoria2 + "$\n" + "20 - 45:",
-    Categoria3 + "$\n" + "46 - 65:",
-    Categoria4 + "$\n" + "66+:",
+    "- Lista de cantidad de dinero no percibido por categoría -\n" + "5 - 14: $" +
+    Categoria1 + "\n" + "15 - 19: $" +
+    Categoria2 + "\n" + "20 - 45: $" +
+    Categoria3 + "\n" + "46 - 65: $" +
+    Categoria4 + "\n" + "66+: $" +
     Categoria5
   );
 }
 console.log("8)");
 Teatro(Clientes = [4, 5, 5, 8, 44, 65, 88, 21, 48, 96, 21, 47, 52, 8, 6, 2, 1, 4, 94, 15, 18, 16, 16, 17], 22000);
+console.log("\n");
+
+//9
+function Kia(Vendedores = []) {
+  Vendedores.forEach((Valor, Vendedor) => {
+    switch (true) {
+      case Valor <= 20000000:
+        console.log(Vendedor, "Vendió $" + Valor, "y obtuvo una comisión de $" + (Valor * 0.10) + "\n");
+        break;
+      case 20000000 < Valor && Valor < 40000000:
+        console.log(Vendedor, "Vendió $" + Valor, "y obtuvo una comisión de $" + (Valor * 0.15) + "\n");
+        break;
+      case 40000000 <= Valor && Valor < 80000000:
+        console.log(Vendedor, "Vendió $" + Valor, "y obtuvo una comisión de $" + (Valor * 0.20) + "\n");
+        break;
+      case 80000000 <= Valor && Valor < 160000000:
+        console.log(Vendedor, "Vendió $" + Valor, "y obtuvo una comisión de $" + (Valor * 0.25) + "\n");
+        break;
+      case Valor >= 160000000:
+        console.log(Vendedor, "Vendió $" + Valor, "y obtuvo una comisión de $" + (Valor * 0.30) + "\n");
+        break;
+
+      default:
+        break;
+    }
+  });
+}
+console.log("9)");
+/*Se realizará la prueba con una muestra del 10% de los vendedores, por motivos de cantidad de datos,
+Pero cabe resartar que al ser una estructura de datos dinámica, puede admitir la cantidad de datos deseados.*/
+let VendedoresKia = new Map();
+VendedoresKia.set("Vendedor1", 45562546), VendedoresKia.set("Vendedor2", 54632541), VendedoresKia.set("Vendedor3", 26541575), VendedoresKia.set("Vendedor4", 63254125), VendedoresKia.set("Vendedor5", 74521652), VendedoresKia.set("Vendedor6", 965213656), VendedoresKia.set("Vendedor7", 125462533), VendedoresKia.set("Vendedor8", 85231254), VendedoresKia.set("Vendedor9", 936254), VendedoresKia.set("Vendedor10", 45936254);
+Kia(VendedoresKia);
+console.log("\n");
+
 
