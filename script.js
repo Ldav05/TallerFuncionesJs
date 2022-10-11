@@ -136,3 +136,18 @@ function PromedioEdades(Hombres = [], Mujeres = []) {
 console.log("4)");
 PromedioEdades(Hombres = [17, 16, 15, 22, 19, 18, 20, 22, 21, 15, 16, 17, 17, 17], Mujeres = [16, 16, 18, 18, 15, 16, 19, 19, 17, 20, 24, 21, 14]);
 console.log('\n');
+
+
+//5
+function NumeroMenor(Numeros = []) {
+  let Menor = Infinity;
+  Numeros.forEach(Numero => {
+    if (Menor > Numero) {
+      Menor = Numero;
+    }
+  });
+  console.log("El número menor es:",Menor);
+}
+console.log("5)");
+NumeroMenor(Numeros = [5,8,9,4,5,1,4,9,2,55,3]);
+console.log('\n');
