@@ -62,3 +62,44 @@ AutosxCalcomania(
     "8561",
   ])
 );
+
+//2
+function Zoo(a = [], animal) {
+  //Se trabajará con las Jirafas
+  let rango1 = 0,
+    rango2 = 0,
+    rango3 = 0;
+    
+  a.forEach((edad) => {
+    if (edad >= 0 && edad <= 1) {
+      rango1++;
+    }
+    if (edad > 1 && edad > 3) {
+      rango2++;
+    }
+    if (edad >= 3) {
+      rango3++;
+    }
+  });
+
+  console.log(
+    "Porcentaje de",
+    animal,
+    "entre 0 y 1 años de edad:",
+    (rango1 / (rango1 + rango2 + rango3)) * 100 + "%"
+  );
+  console.log(
+    "Porcentaje de",
+    animal,
+    "de mas de 1 y menos de 3 años de edad:",
+    (rango2 / (rango1 + rango2 + rango3)) * 100 + "%"
+  );
+  console.log(
+    "Porcentaje de",
+    animal,
+    "de 3 o mas años de edad:",
+    (rango3 / (rango1 + rango2 + rango3)) * 100 + "%"
+  );
+}
+console.log("2)");
+Zoo((a = [4, 2, 6, 8, 4, 5, 8, 2, 1, 4, 8, 1, 2, 3, 6]), "Jirafas");
