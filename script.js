@@ -114,7 +114,7 @@ function SueldoxEmpleado(Horas) {
   } else if (Horas >= 40) {
     Sueldo = (Horas - 40) * 25 + 800;
   }
-  console.log("El sueldo es de: $"+Sueldo);
+  console.log("El sueldo es de: $" + Sueldo);
 }
 console.log("3)");
 SueldoxEmpleado(52);
@@ -248,7 +248,7 @@ Teatro(Clientes = [4, 5, 5, 8, 44, 65, 88, 21, 48, 96, 21, 47, 52, 8, 6, 2, 1, 4
 console.log("\n");
 
 //9
-function Kia(Vendedores = []) {
+function Kia(Vendedores) {
   Vendedores.forEach((Valor, Vendedor) => {
     switch (true) {
       case Valor <= 20000000:
@@ -274,10 +274,52 @@ function Kia(Vendedores = []) {
 }
 console.log("9)");
 /*Se realizará la prueba con una muestra del 10% de los vendedores, por motivos de cantidad de datos,
-Pero cabe resartar que al ser una estructura de datos dinámica, puede admitir la cantidad de datos deseados.*/
+Pero cabe resaltar que al ser una estructura de datos dinámica, puede admitir la cantidad de datos deseados.*/
 let VendedoresKia = new Map();
 VendedoresKia.set("Vendedor1", 45562546), VendedoresKia.set("Vendedor2", 54632541), VendedoresKia.set("Vendedor3", 26541575), VendedoresKia.set("Vendedor4", 63254125), VendedoresKia.set("Vendedor5", 74521652), VendedoresKia.set("Vendedor6", 965213656), VendedoresKia.set("Vendedor7", 125462533), VendedoresKia.set("Vendedor8", 85231254), VendedoresKia.set("Vendedor9", 936254), VendedoresKia.set("Vendedor10", 45936254);
 Kia(VendedoresKia);
 console.log("\n");
 
 
+//10
+function Encuesta(Votos) {
+  let C1 = 0, C2 = 0, C3 = 0;
+  Votos.forEach(Voto => {
+    switch (Voto) {
+      case "C1":
+        C1++;
+        break;
+      case "C2":
+        C2++;
+        break;
+      case "C3":
+        C3++;
+        break;
+
+      default:
+        break;
+    }
+  });
+
+  if (C1 > C2 && C1 > C3) {
+     console.log("El ganador es el candidato #1");
+  } if (C2 > C1 && C2 > C3) {
+    console.log("El ganador es el candidato #2");
+  }if (C3 > C1 && C3 > C2) {
+    console.log("El ganador es el candidato #3");
+  }if (C2 == C1) {
+    console.log("Empate entre los candidatos #1 y #2");
+  }if (C2 == C3) {
+    console.log("Empate entre los candidatos #2 y #3");
+  }if (C3 == C1) {
+    console.log("Empate entre el candidato #1 y #3");
+  } else if(C1 == C2 && C1 == C3){
+    console.log("Triple empate");
+  }
+
+  console.log("----------Lista de Votos---------\n"+"Candidato #1:",C1,"votos \n"+"Candidato #2:",C2,"votos \n"+"Candidato #3:",C3,"votos \n");
+}
+console.log("10)")
+//Se trabajará con una muestra representativa
+Encuesta(Votos = ["C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2"]);
+console.log("\n");
