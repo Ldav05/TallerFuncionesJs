@@ -1,31 +1,35 @@
 //1
 function AutosxCalcomania(placa = []) {
-  let Amarilla = 0, Rosa = 0, Roja = 0, Verde = 0, Azul = 0;
-  placa.forEach(numero => {
-    ultimo = numero.split('')[numero.length - 1];
+  let Amarilla = 0,
+    Rosa = 0,
+    Roja = 0,
+    Verde = 0,
+    Azul = 0;
+  placa.forEach((numero) => {
+    ultimo = numero.split("")[numero.length - 1];
     switch (ultimo) {
-      case '1':
-      case '2':
+      case "1":
+      case "2":
         Amarilla++;
         break;
 
-      case '3':
-      case '4':
+      case "3":
+      case "4":
         Rosa++;
         break;
 
-      case '5':
-      case '6':
+      case "5":
+      case "6":
         Roja++;
         break;
 
-      case '7':
-      case '8':
+      case "7":
+      case "8":
         Verde++;
         break;
 
-      case '9':
-      case '10':
+      case "9":
+      case "10":
         Azul++;
         break;
 
@@ -34,38 +38,40 @@ function AutosxCalcomania(placa = []) {
     }
   });
   console.log(
-    'Autos con calcomanía amarilla:',
-    Amarilla + '\n' + 'Autos con calcomanía Rosa:',
-    Rosa + '\n' + 'Autos con calcomania roja:',
-    Roja + '\n' + 'Autos con calcomanía verde:',
-    Verde + '\n' + 'Autos con calcomanía Azul:',
+    "Autos con calcomanía amarilla:",
+    Amarilla + "\n" + "Autos con calcomanía Rosa:",
+    Rosa + "\n" + "Autos con calcomania roja:",
+    Roja + "\n" + "Autos con calcomanía verde:",
+    Verde + "\n" + "Autos con calcomanía Azul:",
     Azul
   );
 }
-console.log('1)');
+console.log("1)");
 AutosxCalcomania(
   (placa = [
-    '1542',
-    '9816',
-    '8461',
-    '4546',
-    '8165',
-    '1652',
-    '9861',
-    '9516',
-    '9164',
-    '8841',
-    '8561',
+    "1542",
+    "9816",
+    "8461",
+    "4546",
+    "8165",
+    "1652",
+    "9861",
+    "9516",
+    "9164",
+    "8841",
+    "8561",
   ])
 );
-console.log('\n');
+console.log("\n");
 
 //2
 function Zoo(a = [], animal) {
   //Se trabajará con las Jirafas
-  let rango1 = 0, rango2 = 0, rango3 = 0;
+  let rango1 = 0,
+    rango2 = 0,
+    rango3 = 0;
 
-  a.forEach(edad => {
+  a.forEach((edad) => {
     if (edad >= 0 && edad <= 1) {
       rango1++;
     }
@@ -78,27 +84,27 @@ function Zoo(a = [], animal) {
   });
 
   console.log(
-    'Porcentaje de',
+    "Porcentaje de",
     animal,
-    'entre 0 y 1 años de edad:',
-    rango1 / (rango1 + rango2 + rango3) * 100 + '%'
+    "entre 0 y 1 años de edad:",
+    (rango1 / (rango1 + rango2 + rango3)) * 100 + "%"
   );
   console.log(
-    'Porcentaje de',
+    "Porcentaje de",
     animal,
-    'de mas de 1 y menos de 3 años de edad:',
-    rango2 / (rango1 + rango2 + rango3) * 100 + '%'
+    "de mas de 1 y menos de 3 años de edad:",
+    (rango2 / (rango1 + rango2 + rango3)) * 100 + "%"
   );
   console.log(
-    'Porcentaje de',
+    "Porcentaje de",
     animal,
-    'de 3 o mas años de edad:',
-    rango3 / (rango1 + rango2 + rango3) * 100 + '%'
+    "de 3 o mas años de edad:",
+    (rango3 / (rango1 + rango2 + rango3)) * 100 + "%"
   );
 }
-console.log('2)');
-Zoo((a = [4, 2, 6, 8, 4, 5, 8, 2, 1, 4, 8, 1, 2, 3, 6]), 'Jirafas');
-console.log('\n');
+console.log("2)");
+Zoo((a = [4, 2, 6, 8, 4, 5, 8, 2, 1, 4, 8, 1, 2, 3, 6]), "Jirafas");
+console.log("\n");
 
 //3
 function SueldoxEmpleado(Horas) {
@@ -108,11 +114,11 @@ function SueldoxEmpleado(Horas) {
   } else if (Horas >= 40) {
     Sueldo = (Horas - 40) * 25 + 800;
   }
-  console.log('El sueldo es de:', Sueldo + '$');
+  console.log("El sueldo es de:", Sueldo + "$");
 }
-console.log('3)');
+console.log("3)");
 SueldoxEmpleado(52);
-console.log('\n');
+console.log("\n");
 
 //4
 function PromedioEdades(Hombres = [], Mujeres = []) {
@@ -121,72 +127,71 @@ function PromedioEdades(Hombres = [], Mujeres = []) {
     PromedioH = 0,
     PromedioM = 0,
     PromedioE = 0;
-  Hombres.forEach(Edad => {
+  Hombres.forEach((Edad) => {
     SumatoriaH = SumatoriaH + Edad;
   });
   PromedioH = SumatoriaH / Hombres.length;
-  Mujeres.forEach(Edad => {
+  Mujeres.forEach((Edad) => {
     SumatoriaM = SumatoriaM + Edad;
   });
   PromedioM = SumatoriaM / Mujeres.length;
   PromedioE = (SumatoriaH + SumatoriaM) / (Hombres.length + Mujeres.length);
   console.log(
-    'Promedio de edades de hombres:',
-    PromedioH + '\n' + 'Promedio de edades de Mujeres:',
-    PromedioM + '\n' + 'Promedio de edades del grupo:',
+    "Promedio de edades de hombres:",
+    PromedioH + "\n" + "Promedio de edades de Mujeres:",
+    PromedioM + "\n" + "Promedio de edades del grupo:",
     PromedioE
   );
 }
-console.log('4)');
+console.log("4)");
 PromedioEdades(
   (Hombres = [17, 16, 15, 22, 19, 18, 20, 22, 21, 15, 16, 17, 17, 17]),
   (Mujeres = [16, 16, 18, 18, 15, 16, 19, 19, 17, 20, 24, 21, 14])
 );
-console.log('\n');
+console.log("\n");
 
 //5
 function NumeroMenor(Numeros = []) {
   let Menor = Infinity;
-  Numeros.forEach(Numero => {
+  Numeros.forEach((Numero) => {
     if (Menor > Numero) {
       Menor = Numero;
     }
   });
-  console.log('El número menor es:', Menor);
+  console.log("El número menor es:", Menor);
 }
-console.log('5)');
+console.log("5)");
 NumeroMenor((Numeros = [5, 8, 9, 4, 5, 1, 4, 9, 2, 55, 3]));
-console.log('\n');
+console.log("\n");
 
 //6
 function Bascula(DiezBasculas = [], PesoAnterior) {
-  let SumatoriaPeso = 0, PromedioPeso = 0;
-  DiezBasculas.forEach(Peso => {
+  let SumatoriaPeso = 0,
+    PromedioPeso = 0;
+  DiezBasculas.forEach((Peso) => {
     SumatoriaPeso += Peso;
   });
   PromedioPeso = SumatoriaPeso / DiezBasculas.length;
   if (PromedioPeso > PesoAnterior) {
-    console.log('SUBIÓ(' + (PromedioPeso - PesoAnterior) + 'kg)');
+    console.log("SUBIÓ(" + (PromedioPeso - PesoAnterior) + "kg)");
   } else if (PromedioPeso < PesoAnterior) {
-    console.log('BAJÓ(' + (PesoAnterior - PromedioPeso) + 'kg)');
+    console.log("BAJÓ(" + (PesoAnterior - PromedioPeso) + "kg)");
   } else {
-    console.log('SIN CAMBIO');
+    console.log("SIN CAMBIO");
   }
 }
-console.log('6)');
+console.log("6)");
 Bascula(
   (Pesaje = [100, 100.2, 99, 100, 100.4, 99.6, 99.8, 100, 100, 100.4]),
   140
 );
-console.log('\n');
-
+console.log("\n");
 
 //7
 function TotalCompra(ListaCompra) {
   let Total = 0;
   ListaCompra.forEach((Precio, Producto) => {
     Total += Precio;
-
   });
   console.log("El total de la compra es:", Total + "$");
 }
@@ -198,5 +203,46 @@ ListaCompra.set("TotalPoducto3", 25000);
 ListaCompra.set("totalPoducto4", 2500);
 ListaCompra.set("TotalPoducto5", 5000);
 TotalCompra(ListaCompra);
-console.log('\n');
+console.log("\n");
+
+//8
+function Teatro(Clientes = [], Precio) {
+  let Categoria1 = 0,
+    Categoria2 = 0,
+    Categoria3 = 0,
+    Categoria4 = 0,
+    Categoria5 = 0;
+  Clientes.forEach((Edad) => {
+    switch (true) {
+      case 5 <= Edad && Edad <= 14:
+        Categoria1 += Precio * 0.35;
+        break;
+      case 15 <= Edad && Edad <= 19:
+        Categoria2 += Precio * 0.25;
+        break;
+      case 20 <= Edad && Edad <= 45:
+        Categoria3 += Precio * 0.1;
+        break;
+      case 46 <= Edad && Edad <= 65:
+        Categoria4 += Precio * 0.25;
+        break;
+      case Edad >= 66:
+        Categoria5 += Precio * 0.35;
+        break;
+
+      default:
+        break;
+    }
+  });
+  console.log(
+    "- Lista de cantidad de dinero no percibido por categoría -\n" + "5 - 14:",
+    Categoria1 + "$\n" + "15 - 19:",
+    Categoria2 + "$\n" + "20 - 45:",
+    Categoria3 + "$\n" + "46 - 65:",
+    Categoria4 + "$\n" + "66+:",
+    Categoria5
+  );
+}
+console.log("8)");
+Teatro(Clientes = [4, 5, 5, 8, 44, 65, 88, 21, 48, 96, 21, 47, 52, 8, 6, 2, 1, 4, 94, 15, 18, 16, 16, 17], 22000);
 
