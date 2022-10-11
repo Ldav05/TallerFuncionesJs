@@ -114,3 +114,25 @@ console.log('3)');
 SueldoxEmpleado(52);
 console.log('\n');
 
+
+//4
+function PromedioEdades(Hombres = [], Mujeres = []) {
+  let SumatoriaH = 0,
+    SumatoriaM = 0,
+    PromedioH = 0,
+    PromedioM = 0,
+    PromedioE = 0;
+  Hombres.forEach(Edad => {
+    SumatoriaH = SumatoriaH + Edad;
+  });
+  PromedioH = SumatoriaH / Hombres.length;
+  Mujeres.forEach(Edad => {
+    SumatoriaM = SumatoriaM + Edad;
+  });
+  PromedioM = SumatoriaM / Mujeres.length;
+  PromedioE = (SumatoriaH + SumatoriaM) / (Hombres.length + Mujeres.length);
+  console.log("Promedio de edades de hombres:", PromedioH + "\n" + "Promedio de edades de Mujeres:", PromedioM + "\n" + "Promedio de edades del grupo:", PromedioE);
+}
+console.log("4)");
+PromedioEdades(Hombres = [17, 16, 15, 22, 19, 18, 20, 22, 21, 15, 16, 17, 17, 17], Mujeres = [16, 16, 18, 18, 15, 16, 19, 19, 17, 20, 24, 21, 14]);
+console.log('\n');
