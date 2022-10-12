@@ -302,26 +302,26 @@ function Encuesta(Votos) {
   });
 
   if (C1 > C2 && C1 > C3) {
-     console.log("El ganador es el candidato #1");
+    console.log("El ganador es el candidato #1");
   } if (C2 > C1 && C2 > C3) {
     console.log("El ganador es el candidato #2");
-  }if (C3 > C1 && C3 > C2) {
+  } if (C3 > C1 && C3 > C2) {
     console.log("El ganador es el candidato #3");
-  }if (C2 == C1) {
+  } if (C2 == C1) {
     console.log("Empate entre los candidatos #1 y #2");
-  }if (C2 == C3) {
+  } if (C2 == C3) {
     console.log("Empate entre los candidatos #2 y #3");
-  }if (C3 == C1) {
+  } if (C3 == C1) {
     console.log("Empate entre el candidato #1 y #3");
-  } else if(C1 == C2 && C1 == C3){
+  } else if (C1 == C2 && C1 == C3) {
     console.log("Triple empate");
   }
 
-  console.log("----------Lista de Votos---------\n"+"Candidato #1:",C1,"votos \n"+"Candidato #2:",C2,"votos \n"+"Candidato #3:",C3,"votos \n");
+  console.log("----------Lista de Votos---------\n" + "Candidato #1:", C1, "votos \n" + "Candidato #2:", C2, "votos \n" + "Candidato #3:", C3, "votos \n");
 }
 console.log("10)")
 //Se trabajará con una muestra representativa
-Encuesta(Votos = ["C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2","C1","C1","C2","C3","C2"]);
+Encuesta(Votos = ["C1", "C1", "C2", "C3", "C2", "C1", "C1", "C2", "C3", "C2", "C1", "C1", "C2", "C3", "C2", "C1", "C1", "C2", "C3", "C2", "C1", "C1", "C2", "C3", "C2", "C1", "C1", "C2", "C3", "C2", "C1", "C1", "C2", "C3", "C2", "C1", "C1", "C2", "C3", "C2", "C1", "C1", "C2", "C3", "C2"]);
 console.log("\n");
 
 
@@ -332,8 +332,28 @@ function Primos(Numeros = []) {
     Sumatoria = Sumatoria + Numero;
     Productoria = Numero * Productoria;
   });
-  console.log("Sumatoria:",Sumatoria+"\nProductoria:",Productoria+"\nPromedio:",(Sumatoria/Numeros.length));
+  console.log("Sumatoria:", Sumatoria + "\nProductoria:", Productoria + "\nPromedio:", (Sumatoria / Numeros.length));
 }
 console.log("11)");
 Primos(Numeros = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]);
+console.log("\n");
+
+
+//12
+function Entero(Numero) {
+  let Digitos = [], Sumatoria = 0, Productoria = 1;
+  while (Numero > 0) {
+    Digitos.push(Numero % 10);
+    Numero = parseInt(Numero / 10);
+  }
+  Digitos.reverse();
+  Digitos.forEach(Numero => {
+    Sumatoria = Sumatoria + Numero;
+    Productoria = Numero * Productoria;
+  });
+  console.log("Sumatoria:", Sumatoria + "\nProductoria:", Productoria + "\nPromedio:", (Sumatoria / Numeros.length));
+
+}
+console.log("12)");
+Entero(225);
 console.log("\n");
