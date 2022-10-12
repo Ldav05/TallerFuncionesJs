@@ -357,3 +357,31 @@ function Entero(Numero) {
 console.log("12)");
 Entero(225);
 console.log("\n");
+
+
+//13
+function Fibonacci(Limite) {
+
+  var fibo = [1, 2], Serie = [], Par = 0, Impar = 0, Ceros = 0;
+
+  for (i = 2; i <= Limite; i++) {
+    fibo.push(fibo[i - 1] + fibo[i - 2]);
+    Serie.push(fibo[i]);
+  }
+
+  Serie.forEach(Numero => {
+    if (Numero == 0) {
+      Ceros++;
+    }
+    if ((Numero % 2) == 0) {
+      Par++;
+    } if ((Numero % 2) != 0) {
+      Impar++;
+    }
+  });
+
+  console.log("Pares:",Par+"\nImpares:",Impar+"\nCeros:",Ceros);
+}
+console.log("13)");
+Fibonacci(100);
+console.log("\n");
