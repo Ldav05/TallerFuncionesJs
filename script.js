@@ -385,3 +385,18 @@ function Fibonacci(Limite) {
 console.log("13)");
 Fibonacci(100);
 console.log("\n");
+
+
+//14
+function MCD(a, b) {
+  let Aux; 
+  while (b !== 0) {
+      Aux = b;
+      b = a % b;
+      a = Aux;
+  }
+  console.log("Máximo común divisor:",a);
+}
+console.log("14)");
+MCD(45,18);
+console.log("\n");
