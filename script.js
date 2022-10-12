@@ -400,3 +400,18 @@ function MCD(a, b) {
 console.log("14)");
 MCD(45,18);
 console.log("\n");
+
+
+//15
+function CrecimientoPais() {
+  let a = 25, b = 19.9, i = 0;
+  while (b < a) {
+    a += a * 0.02;
+    b += b * 0.03;
+    i++;
+  }
+  console.log("El país B sobrepasará en población al país A en",(1994+i));
+}
+console.log("15)");
+CrecimientoPais();
+console.log("\n");
